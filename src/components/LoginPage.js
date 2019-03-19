@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './LoginPage.module.css';
 import { Button } from 'react-bootstrap';
-import globalStyles from '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 
 class LoginPage extends Component {
