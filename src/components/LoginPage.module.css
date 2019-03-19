@@ -7,16 +7,39 @@
     font-weight: 500;
     font-size: 140%;
     color: #777171;
+    text-align: center;
     /* justify-content: center; */
     /* color: #5C5F62; */
 }
 
-.logo {
-
+.logoContainer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 24%;
+    margin-left: 38%;
+    
 }
 
-p {
-    margin-bottom: 30px;
+.svgLogo {
+    height: 120px;
+    margin-left: -8px;
+    margin-bottom: 40px;
+}
+
+.column {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 500%;
+    color: #1F4F7B;
+}
+
+.building {
+    margin-bottom: 45px;
+    /* margin-top: 30px; */
+}
+
+.circle {
+    display: inline;
 }
 
 .signup {
@@ -28,7 +51,7 @@ p {
 }
 
 .Input {
-    width: 25%;
+    width: 30%;
     height: 35px;
     margin-bottom: 12px;
     border-radius: 7px;
@@ -36,6 +59,7 @@ p {
     box-shadow: none !important;
     border: 1.5px solid #999999;
     padding-left: 10px;
+    padding-top: 3px;
     font-family: 'Cantata One', serif;
     color: #a9a9a9;
     font-size: 70%;
@@ -50,7 +74,7 @@ p {
     width: 8%;
     height: 35px;
     border-radius: 7px;
-    margin-left: 18%;
+    margin-left: 23%;
 }
 
 .inputForm {
