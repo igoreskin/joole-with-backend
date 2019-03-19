@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#7bb5ee, #ffffff);
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 140%;
+    color: #777171;
+    align-content: space-between;
+    /* color: #5C5F62; */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.signup {
+    color: #5C5F62;
+    text-align: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    font-size: 90%;
+}
+
+.Input {
+    width: 25%;
+    height: 35px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+    outline: 0;
+    box-shadow: none !important;
+    border: 1.5px solid #999999;
+    padding-left: 10px;
+    font-family: 'Cantata One', serif;
+    color: #a9a9a9;
+    font-size: 70%;
+    font-weight: 700;
+}
+
+.login {
+    background-color: #6384A3;
+    outline: 0;
+    box-shadow: none !important;
+    border: 1.5px solid #999999;
+    width: 8%;
+    height: 35px;
+    border-radius: 7px;
+    margin-left: 17%;
+}
