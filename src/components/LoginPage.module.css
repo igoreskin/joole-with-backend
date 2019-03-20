@@ -15,14 +15,14 @@
 .logoContainer {
     margin-top: 100px;
     margin-bottom: 20px;
-    width: 24%;
-    margin-left: 38%;
+    width: 18%;
+    margin-left: 41%;
     
 }
 
 .svgLogo {
     height: 120px;
-    margin-left: -8px;
+    margin-left: -11px;
     margin-bottom: 40px;
 }
 
@@ -38,9 +38,9 @@
     /* margin-top: 30px; */
 }
 
-.circle {
+/* .circle {
     display: inline;
-}
+} */
 
 .signup {
     color: #5C5F62;
@@ -50,7 +50,7 @@
     font-size: 90%;
 }
 
-.Input {
+/* .Input {
     width: 30%;
     height: 35px;
     margin-bottom: 12px;
@@ -79,5 +79,5 @@
 
 .inputForm {
     text-align: center;
-}
+} */
 
