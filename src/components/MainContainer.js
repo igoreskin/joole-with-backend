@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './MainContainer.module.css';
 import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 import LoginForm from './LoginForm';
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class MainContainer extends Component {
     constructor(props) {
@@ -37,7 +40,9 @@ class MainContainer extends Component {
 
                 <p className={styles.building}>Building Product Selection Platform</p>
 
-                <LoginForm />
+                {/* <LoginForm /> */}
+                <Route exact path='/' render={() => <p><Link to={`/login`} >Please click here to login</Link></p>} />
+                <Route exact path='/login' component={LoginForm} /> 
 
             </div> /* className=styles.container */
         )
