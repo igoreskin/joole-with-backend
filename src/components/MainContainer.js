@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import styles from './LoginPage.module.css';
-import { Button } from 'react-bootstrap';
+import styles from './MainContainer.module.css';
 import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 import LoginForm from './LoginForm';
 
-class LoginPage extends Component {
+class MainContainer extends Component {
     constructor(props) {
         super(props);
     }
@@ -47,4 +46,4 @@ class LoginPage extends Component {
 
 }
 
-export default LoginPage;
+export default MainContainer;

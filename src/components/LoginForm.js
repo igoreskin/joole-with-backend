@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import styles from './LoginForm.module.css';
 import { Button } from 'react-bootstrap';
-import globalStyles from './bootstrap.min.module.css';
-import cx from 'classnames';
+// import globalStyles from './bootstrap.min.module.css';
+// import cx from 'classnames';
 
 class LoginForm extends Component {
     constructor(props) {
