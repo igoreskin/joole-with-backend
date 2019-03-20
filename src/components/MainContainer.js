@@ -41,7 +41,8 @@ class MainContainer extends Component {
                 <p className={styles.building}>Building Product Selection Platform</p>
 
                 {/* <LoginForm /> */}
-                <Route exact path='/' render={() => <p><Link to={`/login`} >Please click here to login</Link></p>} />
+                <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
+                    Please click here to login!</Link></p>} />
                 <Route exact path='/login' component={LoginForm} /> 
 
             </div> /* className=styles.container */

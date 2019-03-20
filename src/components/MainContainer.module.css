@@ -50,6 +50,15 @@
     font-size: 90%;
 }
 
+.linkToLogin {
+    color: #5C5F62;
+    font-size: 90%;
+}
+
+.linkToLogin:hover {
+    text-decoration: none;
+}
+
 /* .Input {
     width: 30%;
     height: 35px;
