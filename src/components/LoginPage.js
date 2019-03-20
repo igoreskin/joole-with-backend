@@ -6,6 +6,9 @@ import cx from 'classnames';
 import LoginForm from './LoginForm';
 
 class LoginPage extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
@@ -37,11 +40,6 @@ class LoginPage extends Component {
 
                 <LoginForm />
 
-                
-
-                {/* <svg width="100" height="100">
-                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
-                </svg> */}
             </div> /* className=styles.container */
         )
     }
