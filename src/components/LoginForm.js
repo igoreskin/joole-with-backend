@@ -17,7 +17,10 @@ class LoginForm extends Component {
     loginClick = (event) => {
         event.preventDefault()
         console.log("Login clicked!");
-        console.log(this.state)
+        console.log(this.state);
+        // this.setState({
+
+        // })
     }
 
     handleOnChange = event => {

@@ -13,12 +13,19 @@ class MainContainer extends Component {
         super(props);
     }
 
+    // componentDidMount() {
+    //     this.props.actions.loadRegisteredUsers();
+    // }
+
+    isLoggedIn() {
+        localStorage.getItem('current_user');
+    }
+
     render() {
         return (
             <div className={styles.container}>
-                <div className={styles.signup}>Sign up</div>
 
-                {/* <div className={styles.logo}>joole</div> */}
+                {this.isLoggedIn ? <div className={styles.signup}>Sign up</div> : null}
 
                 <div className={styles.logoContainer}>
                     <div className={cx(globalStyles['container-fluid'])}>
