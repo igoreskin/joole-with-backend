@@ -61,4 +61,11 @@ class MainContainer extends Component {
 
 }
 
+// const mapStateToProps = (state) => {
+//     console.log(state.users.users)
+//     return {
+//       users: state.users.users
+//     }
+//   }
+
 export default MainContainer;

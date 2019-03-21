@@ -23,15 +23,13 @@ class SearchForm extends Component {
                     Dropdown button
                 </button>
                 <input className={styles.searchInput} />&nbsp;
-                <i class="fas fa-caret-down"></i>&nbsp;&nbsp;&nbsp;
-                <i class="fas fa-search"></i>
+
+                <i class="fas fa-caret-down" style={{position: 'relative', left: '-4.5%', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-search" style={{position: 'relative', left: '-4.5%', zIndex: "10"}}></i>
             </div>
         )
     }
 }
-
-// className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}
-
 
 
 
