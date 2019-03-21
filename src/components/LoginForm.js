@@ -17,17 +17,18 @@ class LoginForm extends Component {
     loginClick = (event) => {
         event.preventDefault()
         console.log("Login clicked!");
+        this.setState({
+            username: event.target.username,
+            password: event.target.password
+        })
         console.log(this.state);
-        // this.setState({
-
-        // })
     }
 
     handleOnChange = event => {
         this.setState({
           [event.target.name]: event.target.value
         });
-        console.log(this.state)
+        // console.log(this.state)
       }
 
     render() {
