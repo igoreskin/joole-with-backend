@@ -5,6 +5,9 @@ import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 import LoginForm from './LoginForm';
 import SearchForm from './SearchForm';
+import * as actions from '../actions/userActions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -13,9 +16,9 @@ class MainContainer extends Component {
         super(props);
     }
 
-    // componentDidMount() {
-    //     this.props.actions.loadRegisteredUsers();
-    // }
+    componentDidMount() {
+        this.props.actions.loadRegisteredUsers();
+    }
 
     isLoggedIn() {
         localStorage.getItem('current_user');
@@ -61,11 +64,17 @@ class MainContainer extends Component {
 
 }
 
-// const mapStateToProps = (state) => {
-//     console.log(state.users.users)
-//     return {
-//       users: state.users.users
-//     }
-//   }
+const mapStateToProps = (state) => {
+    console.log(state.users.users)
+    return {
+      users: state.users.users
+    }
+  }
 
-export default MainContainer;
+const mapDispatchToProps = (dispatch) => {
+    return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)
+
+// export default MainContainer;
