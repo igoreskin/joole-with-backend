@@ -17,7 +17,9 @@ class MainContainer extends Component {
     }
 
     componentDidMount() {
+        console.log(this.props)
         this.props.actions.loadRegisteredUsers();
+        
     }
 
     isLoggedIn() {
@@ -66,9 +68,9 @@ class MainContainer extends Component {
 
 const mapStateToProps = (state) => {
     console.log(state.users.users)
-    return {
-      users: state.users.users
-    }
+    const users = state.users.users;
+    console.log(users)
+    return users
   }
 
 const mapDispatchToProps = (dispatch) => {
@@ -76,5 +78,3 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainContainer)
-
-// export default MainContainer;
