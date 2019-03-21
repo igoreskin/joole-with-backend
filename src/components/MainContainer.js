@@ -4,6 +4,7 @@ import styles from './MainContainer.module.css';
 import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 import LoginForm from './LoginForm';
+import SearchForm from './SearchForm';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -44,6 +45,7 @@ class MainContainer extends Component {
                 <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
                     Please click here to login!</Link></p>} />
                 <Route exact path='/login' component={LoginForm} /> 
+                <Route exact path='/search' component={SearchForm} /> 
 
             </div> /* className=styles.container */
         )
