@@ -29,7 +29,23 @@ class LoginForm extends Component {
             password: event.target.password
         })
         // console.log(this.state);
-        console.log(this.props.users)
+        // console.log(this.props.users);
+        this.authUser();
+    }
+
+    authUser() {
+        let loggedUser = {username: this.state.username, password: this.state.password};
+        console.log(loggedUser.username)
+        let users = this.props.users;
+        console.log(users[0].username)
+        for(let user of users) {
+            if(loggedUser.username == user.username && loggedUser.password == user.password) {
+                alert("Login successful!")
+                return
+            }
+        }
+        alert("Please enter vaid credentials!")
+        return
     }
 
     handleOnChange = event => {
