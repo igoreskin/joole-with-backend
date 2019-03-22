@@ -20,12 +20,12 @@ class SearchForm extends Component {
                 <button className={cx(globalStyles.btn, globalStyles['btn-secondary'], 
                     globalStyles['dropdown-toggle'], styles.Button)} type="button" id="dropdownMenuButton" 
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
+                    Mechanical &nbsp;&nbsp;
                 </button>
                 <input className={styles.searchInput} />&nbsp;
 
-                <i class="fas fa-caret-down" style={{position: 'relative', left: '-4.5%', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
-                <i class="fas fa-search" style={{position: 'relative', left: '-4.5%', zIndex: "10"}}></i>
+                <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-search" style={{position: 'relative', marginLeft: '-3px', zIndex: "10"}}></i>
             </div>
         )
     }
