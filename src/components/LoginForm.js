@@ -4,6 +4,8 @@ import { Button } from 'react-bootstrap';
 import * as actions from '../actions/userActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import cx from 'classnames';
+import { Redirect } from 'react-router';
 // import globalStyles from './bootstrap.min.module.css';
 // import cx from 'classnames';
 
@@ -13,7 +15,9 @@ class LoginForm extends Component {
 
         this.state = {
             username: '',
-            password: '' 
+            password: '',
+            valid: true,
+            isAuthed: false
         }
     }
 
@@ -40,6 +44,8 @@ class LoginForm extends Component {
         console.log(users[0].username)
         for(let user of users) {
             if(loggedUser.username == user.username && loggedUser.password == user.password) {
+                this.setState({isAuthed: true}, () => {console.log(this.state.isAuthed)});
+                // console.log(this.state.isAuthed)
                 alert("Login successful!")
                 return
             }
@@ -52,20 +58,32 @@ class LoginForm extends Component {
         this.setState({
           [event.target.name]: event.target.value
         });
-        // console.log(this.state)
-      }
+        console.log(event.target.value.length)
+        // if(event.target.value.length < 1) {
+        //     this.setState({valid: false})
+        //     console.log(this.state.valid)
+        // }
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevState.username.length > 0 && this.state.username.length === 0) {
+            this.setState({valid: false});
+            console.log(this.state.valid)
+        }
+    }
 
     render() {
+        if(this.state.isAuthed) {return <Redirect to='/search' />}
         return (
             <form className={styles.inputForm} onSubmit={this.loginClick}>
                 <input 
-                className={styles.Input} type='text' name='username' 
+                className={cx(styles.Input, styles.gray)} type='text' name='username' 
                 placeholder='Username or Email' onChange={this.handleOnChange}></input>
                 {/* <i class="fas fa-user" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i> */}
                 <i class="fas fa-dog" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i>
                 
                 <br/>
-                <input className={styles.Input} type='password' name='password' placeholder='Password' onChange={this.handleOnChange}></input>
+                <input className={cx(styles.Input, styles.gray)} type='password' name='password' placeholder='Password' onChange={this.handleOnChange}></input>
                 <i class="fas fa-lock" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i><br></br>
                 <Button type='submit' className={styles.login} variant="primary">Dog in</Button> 
 

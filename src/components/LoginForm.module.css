@@ -5,13 +5,20 @@
     border-radius: 7px;
     outline: 0;
     box-shadow: none !important;
-    border: 1.5px solid #999999;
     padding-left: 10px;
     padding-top: 3px;
     font-family: 'Cantata One', serif;
     color: #a9a9a9;
     font-size: 70%;
     font-weight: 700;
+}
+
+.gray {
+    border: 1.5px solid #999999;
+}
+
+.red {
+    border: 1.5px solid red;
 }
 
 .login {
