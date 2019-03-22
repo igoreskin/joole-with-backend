@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import styles from './LoginForm.module.css';
 import { Button } from 'react-bootstrap';
+import * as actions from '../actions/userActions';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 // import globalStyles from './bootstrap.min.module.css';
 // import cx from 'classnames';
 
@@ -14,6 +17,10 @@ class LoginForm extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log(this.props.users)
+    }
+
     loginClick = (event) => {
         event.preventDefault()
         console.log("Login clicked!");
@@ -21,7 +28,8 @@ class LoginForm extends Component {
             username: event.target.username,
             password: event.target.password
         })
-        console.log(this.state);
+        // console.log(this.state);
+        console.log(this.props.users)
     }
 
     handleOnChange = event => {
@@ -50,4 +58,17 @@ class LoginForm extends Component {
     }
 }
 
-export default LoginForm;
+const mapStateToProps = (state) => {
+    // console.log(state.users.users)
+    // const users = state.users.users;
+    // console.log(users)
+    // return users
+  }
+
+const mapDispatchToProps = (dispatch) => {
+    return {actions: bindActionCreators(actions, dispatch)}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+
+// export default LoginForm;

@@ -17,9 +17,8 @@ class MainContainer extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
-        this.props.actions.loadRegisteredUsers();
-        
+        console.log(this.props.users)
+        this.props.actions.loadRegisteredUsers(); 
     }
 
     isLoggedIn() {
@@ -56,7 +55,8 @@ class MainContainer extends Component {
                 {/* <LoginForm /> */}
                 <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
                     Please click here to login!</Link></p>} />
-                <Route exact path='/login' component={LoginForm} /> 
+                <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users}/>} />
+                {/* <Route exact path='/login' component={LoginForm} />  */}
                 <Route exact path='/search' component={SearchForm} /> 
 
             </div> /* className=styles.container */
@@ -68,9 +68,8 @@ class MainContainer extends Component {
 
 const mapStateToProps = (state) => {
     console.log(state.users.users)
-    const users = state.users.users;
-    console.log(users)
-    return users
+    return {
+        users: state.users.users}
   }
 
 const mapDispatchToProps = (dispatch) => {
