@@ -26,6 +26,9 @@ class SearchForm extends Component {
 
                 <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
                 <i class="fas fa-search" style={{position: 'relative', marginLeft: '-3px', zIndex: "10"}}></i>
+                <div>
+                <input className={styles.drop} value="HVAC Fans"/>
+                </div>
             </div>
         )
     }

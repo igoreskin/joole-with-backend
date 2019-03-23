@@ -12,6 +12,17 @@
     font-size: 70%;
 }
 
+.drop {
+    position: relative;
+    width: 25%;
+    height: 35px;
+    border: 1.5px solid #999999;
+    font-size: 70%;
+    left: 45px;
+    top: -3px;
+    padding-left: 15px;
+}
+
 /* .icon {
     position: relative;
     left: -4.5%;
