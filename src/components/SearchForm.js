@@ -11,7 +11,14 @@ class SearchForm extends Component {
 
         this.state = {
             search: '',
+            clicked: false
         }
+    }
+
+    handleSearchClick = () => {
+        console.log("Search clicked")
+        const clicked = this.state.clicked;
+        this.setState({ clicked: !clicked }, () => { console.log(this.state) })
     }
 
     render() {
@@ -24,11 +31,14 @@ class SearchForm extends Component {
                 </button>
                 <input className={styles.searchInput} placeholder="search..."/>&nbsp;
 
-                <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
-                <i class="fas fa-search" style={{position: 'relative', marginLeft: '-3px', zIndex: "10"}}></i>
+                <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}} onClick={this.handleSearchClick}></i>&nbsp;&nbsp;&nbsp;
+                <i class="fas fa-search" style={{ position: 'relative', marginLeft: '-3px', zIndex: "10" }} onClick={this.handleSearchClick}></i>
+                
+                {this.state.clicked ? 
                 <div>
-                <input className={styles.drop} value="HVAC Fans"/>
-                </div>
+                    <input className={styles.drop} value="HVAC Fans"/>
+                </div> : null
+                }
             </div>
         )
     }
