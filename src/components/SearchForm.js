@@ -22,7 +22,7 @@ class SearchForm extends Component {
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Mechanical &nbsp;&nbsp;
                 </button>
-                <input className={styles.searchInput} />&nbsp;
+                <input className={styles.searchInput} placeholder="search..."/>&nbsp;
 
                 <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}}></i>&nbsp;&nbsp;&nbsp;
                 <i class="fas fa-search" style={{position: 'relative', marginLeft: '-3px', zIndex: "10"}}></i>

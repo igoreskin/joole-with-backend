@@ -8,6 +8,8 @@
     border: 1.5px solid #999999;
     border-left: none;
     z-index: 5;
+    padding-left: 30px;
+    font-size: 70%;
 }
 
 /* .icon {
@@ -25,6 +27,6 @@
     box-shadow: none !important;
     height: 35px;
     border-radius: 7px;
-    margin-top: -3px;
+    margin-bottom: -1px;
     z-index: 10;
 }
