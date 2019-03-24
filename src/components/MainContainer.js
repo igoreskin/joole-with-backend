@@ -9,8 +9,10 @@ import * as actions from '../actions/userActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Redirect } from 'react-router';
+import Header from './Header';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import LoginBackground from './LoginBackground';
 
 class MainContainer extends Component {
     constructor(props) {
@@ -34,42 +36,37 @@ class MainContainer extends Component {
         return (
             <div className={styles.container}>
 
-                {this.isLoggedIn ? <div className={styles.signup}>Sign up</div> : null}
+                {this.state.loggedIn || sessionStorage.getItem('currentUser') ? null : <div className={styles.signup}>Sign up</div>}
 
-                <div className={styles.logoContainer}>
+                {/* <LoginBackground />  */}
+
+                {/* <div className={styles.logoContainer}>
                     <div className={cx(globalStyles['container-fluid'])}>
                         <div className={cx(globalStyles.row, styles.logo)}>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>j</div>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-6'], styles.column)}>
                             <img src='../../third-attempt-logo.svg' alt='' className={styles.svgLogo} />
-                            {/* <span><svg width="52" height="52" className={styles.circle}>
-                                <circle cx="26" cy="26" r="25" fill="#1F4F7B" opacity="0.4" />
-                            </svg></span>
-                            <span><svg width="52" height="52" className={styles.circle}>
-                                <circle cx="26" cy="26" r="25" fill="#1F4F7B" opacity="0.4" />
-                            </svg></span> */}
+                          
                             </div>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>l</div>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>e</div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <p className={styles.building}>Building Product Selection Platform</p>
+                {/* <p className={styles.building}>Building Product Selection Platform</p> */}
 
-                <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
-                    Please click here to login!</Link></p>} />
+                <Route exact path='/' render={() => <div><LoginBackground /><p><Link className={styles.linkToLogin} to={`/login`}>
+                    Please click here to login!</Link></p></div>} />
+
                 <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn}/>} />
                 <Route exact path='/search' render={() => (this.state.loggedIn || sessionStorage.getItem('currentUser') ? 
                     (<SearchForm />) : (<Redirect to='/login'/>))} />
-
-                {/* {this.state.loggedIn || sessionStorage.getItem('currentUser') ? <Route exact path='/search' component={SearchForm} /> : null} */}
+                <Route exact path='/header' component={Header} />
 
             </div> /* className=styles.container */
         )
     }
-
-
 }
 
 const mapStateToProps = (state) => {

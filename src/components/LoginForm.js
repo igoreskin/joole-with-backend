@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import cx from 'classnames';
 import { Redirect } from 'react-router';
+import { Fragment } from 'react';
+import LoginBackground from './LoginBackground';
 // import globalStyles from './bootstrap.min.module.css';
 // import cx from 'classnames';
 
@@ -70,27 +72,29 @@ class LoginForm extends Component {
     render() {
         if(this.state.isAuthed) {return <Redirect to='/search' />}
         return (
-            <form className={styles.inputForm} onSubmit={this.loginClick}>
-                { this.state.valid ? <input 
-                className={cx(styles.Input, styles.gray)} type='text' name='username' 
-                placeholder='Username or Email' onChange={this.handleOnChange}></input> :
-                <input 
-                className={cx(styles.Input, styles.red)} type='text' name='username' 
-                placeholder='Username or Email' onChange={this.handleOnChange}></input> }
+            <Fragment>
+                <LoginBackground />
+                <form className={styles.inputForm} onSubmit={this.loginClick}>
+                    { this.state.valid ? <input 
+                    className={cx(styles.Input, styles.gray)} type='text' name='username' 
+                    placeholder='Username or Email' onChange={this.handleOnChange}></input> :
+                    <input 
+                    className={cx(styles.Input, styles.red)} type='text' name='username' 
+                    placeholder='Username or Email' onChange={this.handleOnChange}></input> }
 
-                {/* <i class="fas fa-user" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i> */}
-                <i class="fas fa-dog" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i>
-                
-                <br/>
-                { this.state.valid ? <input className={cx(styles.Input, styles.gray)} type='password' name='password' 
-                placeholder='Password' onChange={this.handleOnChange}></input> : 
-                <input className={cx(styles.Input, styles.red)} type='password' name='password' 
-                placeholder='Password' onChange={this.handleOnChange}></input> }
+                    {/* <i class="fas fa-user" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i> */}
+                    <i class="fas fa-dog" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i>
+                    
+                    <br/>
+                    { this.state.valid ? <input className={cx(styles.Input, styles.gray)} type='password' name='password' 
+                    placeholder='Password' onChange={this.handleOnChange}></input> : 
+                    <input className={cx(styles.Input, styles.red)} type='password' name='password' 
+                    placeholder='Password' onChange={this.handleOnChange}></input> }
 
-                <i class="fas fa-lock" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i><br></br>
-                <Button type='submit' className={styles.login} variant="primary">Dog in</Button> 
-
-            </form>
+                    <i class="fas fa-lock" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i><br></br>
+                    <Button type='submit' className={styles.login} variant="primary">Dog in</Button> 
+                </form>
+            </Fragment>
         )
     }
 }
