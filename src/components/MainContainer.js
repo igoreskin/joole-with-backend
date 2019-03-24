@@ -8,12 +8,17 @@ import SearchForm from './SearchForm';
 import * as actions from '../actions/userActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+// import { Redirect } from 'react-router';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class MainContainer extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            loggedIn: false
+        }
     }
 
     componentDidMount() {
@@ -21,8 +26,8 @@ class MainContainer extends Component {
         this.props.actions.loadRegisteredUsers(); 
     }
 
-    isLoggedIn() {
-        localStorage.getItem('current_user');
+    logIn = () => {
+        this.setState({ loggedIn: true }, () => console.log(this.state.loggedIn))
     }
 
     render() {
@@ -52,12 +57,10 @@ class MainContainer extends Component {
 
                 <p className={styles.building}>Building Product Selection Platform</p>
 
-                {/* <LoginForm /> */}
                 <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
                     Please click here to login!</Link></p>} />
-                <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users}/>} />
-                {/* <Route exact path='/login' component={LoginForm} />  */}
-                <Route exact path='/search' component={SearchForm} /> 
+                <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn}/>} />
+                {this.state.loggedIn || sessionStorage.getItem('currentUser') ? <Route exact path='/search' component={SearchForm} /> : null}
 
             </div> /* className=styles.container */
         )

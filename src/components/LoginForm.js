@@ -43,10 +43,11 @@ class LoginForm extends Component {
         let users = this.props.users;
         console.log(users[0].username)
         for(let user of users) {
-            if(loggedUser.username == user.username && loggedUser.password == user.password) {
-                this.setState({isAuthed: true}, () => {console.log(this.state.isAuthed)});
-                // console.log(this.state.isAuthed)
-                alert("Login successful!")
+            if(loggedUser.username === user.username && loggedUser.password === user.password) {
+                this.setState({isAuthed: true}, this.props.logIn(),
+                sessionStorage.getItem('currentUser') === JSON.stringify(loggedUser) ? null : sessionStorage.setItem('currentUser', JSON.stringify(loggedUser))
+                );
+                // alert("Login successful!")
                 return
             }
         }
