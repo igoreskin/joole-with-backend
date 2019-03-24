@@ -8,7 +8,7 @@ import SearchForm from './SearchForm';
 import * as actions from '../actions/userActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-// import { Redirect } from 'react-router';
+import { Redirect } from 'react-router';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -41,7 +41,7 @@ class MainContainer extends Component {
                         <div className={cx(globalStyles.row, styles.logo)}>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>j</div>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-6'], styles.column)}>
-                            <img src='../../third-attempt-logo.svg' className={styles.svgLogo} />
+                            <img src='../../third-attempt-logo.svg' alt='' className={styles.svgLogo} />
                             {/* <span><svg width="52" height="52" className={styles.circle}>
                                 <circle cx="26" cy="26" r="25" fill="#1F4F7B" opacity="0.4" />
                             </svg></span>
@@ -60,7 +60,10 @@ class MainContainer extends Component {
                 <Route exact path='/' render={() => <p><Link className={styles.linkToLogin} to={`/login`}>
                     Please click here to login!</Link></p>} />
                 <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn}/>} />
-                {this.state.loggedIn || sessionStorage.getItem('currentUser') ? <Route exact path='/search' component={SearchForm} /> : null}
+                <Route exact path='/search' render={() => (this.state.loggedIn || sessionStorage.getItem('currentUser') ? 
+                    (<SearchForm />) : (<Redirect to='/login'/>))} />
+
+                {/* {this.state.loggedIn || sessionStorage.getItem('currentUser') ? <Route exact path='/search' component={SearchForm} /> : null} */}
 
             </div> /* className=styles.container */
         )
