@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
 import { Fragment } from 'react';
+import { Redirect } from 'react-router';
 
 import styles from './SearchForm.module.css';
 import LoginBackground from './LoginBackground';
@@ -13,7 +14,8 @@ class SearchForm extends Component {
 
         this.state = {
             search: '',
-            clicked: false
+            clicked: false,
+            redirect: false
         }
     }
 
@@ -21,6 +23,16 @@ class SearchForm extends Component {
         console.log("Search clicked")
         const clicked = this.state.clicked;
         this.setState({ clicked: !clicked }, () => { console.log(this.state) })
+    }
+
+    handleFansClick = () => {
+        this.setState({redirect: true}, () => console.log(this.state.redirect))
+    }
+
+    renderRedirect = () => {
+        if(this.state.redirect) {
+            return <Redirect to='/products' />
+        }
     }
 
     render() {
@@ -40,7 +52,8 @@ class SearchForm extends Component {
                     
                     {this.state.clicked ? 
                     <div>
-                        <input className={styles.drop} value="HVAC Fans"/>
+                        {this.renderRedirect()}
+                        <input className={styles.drop} value="HVAC Fans" onClick={this.handleFansClick}/>
                     </div> : null
                     }
                 </div>
