@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import MainContainer from './components/MainContainer';
 import LoginForm from './components/LoginForm';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
