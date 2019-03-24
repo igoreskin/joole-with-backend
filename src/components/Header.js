@@ -9,8 +9,8 @@ const header = (props) => {
     return (
         <div className={cx(styles.headerContainer, globalStyles['container-fluid'])}>
             <div className={cx(globalStyles.row, styles.headerRow)}>
-                <div className={cx(globalStyles.col, globalStyles['col-sm-2'])}>
 
+                <div className={cx(globalStyles.col, globalStyles['col-sm-2'])}>
                     <div className={cx(globalStyles['container-fluid'])}>
                         <div className={cx(globalStyles.row, styles.logo)}>
                             <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>j</div>
@@ -22,10 +22,28 @@ const header = (props) => {
                             <div className={cx(globalStyles.col, globalStyles['col-sm-5'], styles.column2)}></div>
                         </div>
                     </div>
-
                 </div>
 
-                <div className={cx(globalStyles.col, globalStyles['col-sm-8'])}>j</div>
+                <div className={cx(globalStyles.col, globalStyles['col-sm-8'])}>
+                    <div>
+                        <button className={cx(globalStyles.btn, globalStyles['btn-secondary'],
+                            globalStyles['dropdown-toggle'], styles.Button)} type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            HVAC Fans &nbsp;&nbsp;
+                    </button>
+                        <input className={styles.searchInput} placeholder="search..." />&nbsp;
+    
+                    <i class="fas fa-caret-down" style={{ position: 'relative', marginLeft: '-63px', zIndex: "10" }}></i>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-search" style={{ position: 'relative', marginLeft: '-3px', zIndex: "10" }}></i>
+
+                        {/* {this.state.clicked ?
+                            <div>
+                                <input className={styles.drop} value="HVAC Fans" />
+                            </div> : null
+                        } */}
+                    </div>
+                </div>
+
                 <div className={cx(globalStyles.col, globalStyles['col-sm-2'])} style={{fontSize: '19px'}}>Projects</div>
             </div>
         </div>
@@ -35,4 +53,4 @@ const header = (props) => {
 
 export default header;
 
-{ cx(globalStyles['container-fluid']) }
+// onClick = { this.handleSearchClick }

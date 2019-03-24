@@ -26,6 +26,29 @@
     color: #1F4F7B;
 }
 
-/* .column2 {
-    margin-left: -4px;
-} */
+.searchInput {
+    position: relative;
+    width: 50%;
+    height: 35px;
+    border-radius: 0 7px 7px 0;
+    outline: 0;
+    box-shadow: none !important;
+    border: 1.5px solid #999999;
+    border-left: none;
+    z-index: 5;
+    padding-left: 30px;
+    font-size: 70%;
+}
+
+.Button {
+    position: relative;
+    right: -1%;
+    background-color: #d9d9d9;
+    color: black;
+    outline: 0;
+    box-shadow: none !important;
+    height: 35px;
+    border-radius: 7px;
+    margin-bottom: -1px;
+    z-index: 10;
+}

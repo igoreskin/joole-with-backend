@@ -13,6 +13,7 @@ import Header from './Header';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginBackground from './LoginBackground';
+import ProductsPage from './ProductsPage';
 
 class MainContainer extends Component {
     constructor(props) {
@@ -60,9 +61,10 @@ class MainContainer extends Component {
                 <Route exact path='/' render={() => <div><LoginBackground /><p><Link className={styles.linkToLogin} to={`/login`}>
                     Please click here to login!</Link></p></div>} />
 
-                <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn}/>} />
+                <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn} />} />
                 <Route exact path='/search' render={() => (routeGuard ? (<SearchForm />) : (<Redirect to='/login'/>))} />
-                <Route exact path='/header' component={Header} />
+                {/* <Route exact path='/header' component={Header} /> */}
+                <Route exact path='/products' render={() => (routeGuard ? (<ProductsPage />) : (<Redirect to='/login' />))}  />
 
             </div> /* className=styles.container */
         )
