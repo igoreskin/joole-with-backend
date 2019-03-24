@@ -33,10 +33,11 @@ class MainContainer extends Component {
     }
 
     render() {
+        const routeGuard = this.state.loggedIn || sessionStorage.getItem('currentUser');
         return (
             <div className={styles.container}>
 
-                {this.state.loggedIn || sessionStorage.getItem('currentUser') ? null : <div className={styles.signup}>Sign up</div>}
+                {routeGuard ? null : <div className={styles.signup}>Sign up</div>}
 
                 {/* <LoginBackground />  */}
 
@@ -60,8 +61,7 @@ class MainContainer extends Component {
                     Please click here to login!</Link></p></div>} />
 
                 <Route exact path='/login' render={(routeProps) => <LoginForm {...routeProps} users={this.props.users} logIn={this.logIn}/>} />
-                <Route exact path='/search' render={() => (this.state.loggedIn || sessionStorage.getItem('currentUser') ? 
-                    (<SearchForm />) : (<Redirect to='/login'/>))} />
+                <Route exact path='/search' render={() => (routeGuard ? (<SearchForm />) : (<Redirect to='/login'/>))} />
                 <Route exact path='/header' component={Header} />
 
             </div> /* className=styles.container */

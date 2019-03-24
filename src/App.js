@@ -5,7 +5,6 @@ import './App.css';
 import MainContainer from './components/MainContainer';
 import LoginForm from './components/LoginForm';
 import Header from './components/Header';
-import Wrapper from './components/Wrapper';
 
 class App extends Component {
   render() {
@@ -14,8 +13,6 @@ class App extends Component {
         <div className="App">
 
           <MainContainer />
-
-          {/* <Wrapper /> */}
           
         </div>
       </Router>

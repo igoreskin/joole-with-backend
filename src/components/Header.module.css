@@ -1,4 +1,31 @@
 .headerContainer {
     background: linear-gradient(to right, #ffffff, 30%, #b3d1ec, #cbdff2);
-    height: 300px;
+    height: 120px;
 }
+
+.headerRow {
+    padding-top: 10px;
+    align-items: center;
+}
+
+.logo {
+    padding-left: 30px;
+    /* padding-top: 15px; */
+}
+
+.svgLogo {
+    height: 55px;
+    margin-left: -16px;
+    margin-bottom: 30px;
+}
+
+.column {
+    text-align: left;
+    font-family: 'Fredoka One', cursive;
+    font-size: 270%;
+    color: #1F4F7B;
+}
+
+/* .column2 {
+    margin-left: -4px;
+} */

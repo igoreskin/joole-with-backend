@@ -2,14 +2,13 @@ import React from 'react';
 import styles from './LoginBackground.module.css';
 import globalStyles from './bootstrap.min.module.css';
 import cx from 'classnames';
-import { Fragment } from 'react';
 
 const LoginBackground = (props) => {
     return (
-        <Fragment>
+        <div className={styles.Fragment}>
             <div className={styles.logoContainer}>
                 <div className={cx(globalStyles['container-fluid'])}>
-                    <div className={cx(globalStyles.row, styles.logo)}>
+                    <div className={cx(globalStyles.row)}>
                         <div className={cx(globalStyles.col, globalStyles['col-sm-2'], styles.column)}>j</div>
                         <div className={cx(globalStyles.col, globalStyles['col-sm-6'], styles.column)}>
                             <img src='../../third-attempt-logo.svg' alt='' className={styles.svgLogo} />
@@ -22,7 +21,7 @@ const LoginBackground = (props) => {
             </div>
 
             <p className={styles.building}>Building Product Selection Platform</p>
-        </Fragment>
+        </div>
     )
 }
 
