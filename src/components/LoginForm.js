@@ -83,8 +83,8 @@ class LoginForm extends Component {
                     className={cx(styles.Input, styles.red)} type='text' name='username' 
                     placeholder='Username or Email' onChange={this.handleOnChange}></input> }
 
-                    {/* <i class="fas fa-user" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i> */}
-                    <i class="fas fa-dog" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i>
+                    <i class="fas fa-user" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i>
+                    {/* <i class="fas fa-dog" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i> */}
                     
                     <br/>
                     { this.state.valid ? <input className={cx(styles.Input, styles.gray)} type='password' name='password' 
@@ -93,7 +93,7 @@ class LoginForm extends Component {
                     placeholder='Password' onChange={this.handleOnChange}></input> }
 
                     <i class="fas fa-lock" style={{marginLeft: '-30px', color: '#a9a9a9'}}></i><br></br>
-                    <Button type='submit' className={styles.login} variant="primary">Dog in</Button> 
+                    <Button type='submit' className={styles.login} variant="primary">Log in</Button> 
                 </form>
             </Fragment>
         )
