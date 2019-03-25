@@ -13,7 +13,7 @@ import Header from './Header';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoginBackground from './LoginBackground';
-import ProductsPage from './ProductsPage';
+import ProductsPage from './products/ProductsPage';
 
 class MainContainer extends Component {
     constructor(props) {

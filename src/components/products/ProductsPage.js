@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './Header';
+import Header from '../Header';
 import styles from './ProductsPage.module.css';
+import ProductListView from './ProductListView';
 
 const productsPage = (props) => {
     return(

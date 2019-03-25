@@ -47,8 +47,12 @@ class SearchForm extends Component {
                     </button>
                     <input className={styles.searchInput} placeholder="search..."/>&nbsp;
 
-                    <i class="fas fa-caret-down" style={{position: 'relative', marginLeft: '-63px', zIndex: "10"}} onClick={this.handleSearchClick}></i>&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-search" style={{ position: 'relative', marginLeft: '-3px', zIndex: "10" }} onClick={this.handleSearchClick}></i>
+                    <i class="fas fa-caret-down" 
+                        style={{position: 'relative', marginLeft: '-63px', zIndex: "10", cursor: "pointer"}} 
+                        onClick={this.handleSearchClick}></i>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-search" 
+                        style={{ position: 'relative', marginLeft: '-3px', zIndex: "10", cursor: "pointer"}} 
+                        onClick={this.handleSearchClick}></i>
                     
                     {this.state.clicked ? 
                     <div>

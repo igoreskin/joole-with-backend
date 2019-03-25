@@ -1,0 +1,53 @@
+[
+    {
+        "name:": "Emerson", 
+        "series": "Luray Eco", 
+        "code": "CF860",
+        "techical_data": {
+            "airflow": "8,500",
+            "power": "33",
+            "noise": "40 dBA",
+            "size": "60” "
+        },
+        "past": "10 firm / 1492 global"
+    },
+
+    {
+        "name:": "Minka", 
+        "series": "Aviation", 
+        "code": "F853-RW",
+        "techical_data": {
+            "airflow": "6,604",
+            "power": "25.92",
+            "noise": "36 dBA",
+            "size": "60” "
+        },
+        "past": "10 firm / 1492 global"
+    },
+
+    {
+        "name:": "Emerson", 
+        "series": "Luray Eco", 
+        "code": "CF860",
+        "techical_data": {
+            "airflow": "8,500",
+            "power": "33",
+            "noise": "40 dBA",
+            "size": "60” "
+        },
+        "past": "10 firm / 1492 global"
+    },
+
+    {
+        "name:": "Emerson", 
+        "series": "Luray Eco", 
+        "code": "CF860",
+        "techical_data": {
+            "airflow": "8,500",
+            "power": "33",
+            "noise": "40 dBA",
+            "size": "60” "
+        },
+        "past": "10 firm / 1492 global"
+    }
+]
