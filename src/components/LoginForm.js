@@ -37,9 +37,10 @@ class LoginForm extends Component {
         // console.log(this.state);
         // console.log(this.props.users);
         this.authUser();
+        event.target.reset();
     }
 
-    authUser() {
+    authUser = () => {
         let loggedUser = {username: this.state.username, password: this.state.password};
         console.log(loggedUser.username)
         let users = this.props.users;
@@ -53,7 +54,7 @@ class LoginForm extends Component {
                 return
             }
         }
-        alert("Please enter vaid credentials!")
+        alert("Please enter vaid credentials!");
         return
     }
 
