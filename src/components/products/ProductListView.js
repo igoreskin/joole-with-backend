@@ -9,6 +9,10 @@ const ProductListView = (props) => {
 
             <p className={styles.verified}>Verified 08/21/2016</p>
 
+            <div>
+                <img src='images/emerson.png' className={styles.fan} />
+            </div>
+
             <div className={styles.largeDataDiv}>
                 <div className={styles.largeDataLine}>Emerson</div>
                 <div className={styles.largeDataLine}>Luray Eco Series</div>
@@ -32,6 +36,14 @@ const ProductListView = (props) => {
                 <div className={cx(globalStyles["custom-control"], globalStyles["custom-checkbox"])}>
                     <input type="checkbox" className={cx(globalStyles["custom-control-input"], styles.customInput)} id="customCheck" />
                     <label className={cx(globalStyles["custom-control-label"], styles.customLabel)} for="customCheck">Compare</label>
+                </div>
+
+                <div className={styles.addButton}>
+                    <button className={cx(globalStyles.btn, globalStyles['btn-secondary'],
+                        globalStyles['dropdown-toggle'], styles.Button)} type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add to &nbsp;&nbsp;
+                    </button>
                 </div>
             </div>
 

@@ -30,7 +30,7 @@ const header = (props) => {
                             globalStyles['dropdown-toggle'], styles.Button)} type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             HVAC Fans &nbsp;&nbsp;
-                    </button>
+                        </button>
                         <input className={styles.searchInput} placeholder="search..." />&nbsp;
     
                     <i class="fas fa-caret-down" 

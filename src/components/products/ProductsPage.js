@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from '../Header';
 import styles from './ProductsPage.module.css';
 import ProductListView from './ProductListView';
 
-const productsPage = (props) => {
-    return(
-        <div className={styles.allProducts}>
-            <Header />
-            <ProductListView />
-            <div>In ProductsPage</div>
-        </div>
-    )
+class ProductsPage extends Component {
+
+    componentDidMount() {
+        
+    }
+
+    render() {
+        return (
+            <div className={styles.allProducts}>
+
+                <Header />
+                <ProductListView />
+
+            </div>
+        )
+    }
 }
 
 
 
-export default productsPage;
+export default ProductsPage;

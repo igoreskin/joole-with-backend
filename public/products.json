@@ -1,5 +1,6 @@
 [
-    {
+    {   
+        "image": "images/emerson.png",
         "name:": "Emerson", 
         "series": "Luray Eco", 
         "code": "CF860",

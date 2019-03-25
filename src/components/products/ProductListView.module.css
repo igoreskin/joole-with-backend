@@ -15,6 +15,13 @@
     align-self: flex-end;
     margin-right: 6px;
     margin-top: 7px;
+    z-index: 10;
+}
+
+.fan {
+    width: 100%;
+    margin-top: -30px;
+    z-index: 5;
 }
 
 .largeDataDiv {
@@ -22,8 +29,9 @@
     font-weight: 700;
     color: #1F4F7A;
     font-size: 85%;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
     letter-spacing: 0.8px;
+    margin-top: -20px;
 }
 
 .largeDataLine {
@@ -34,6 +42,7 @@
     background-color: #F2F2F2;
     padding-top: 5px;
     padding-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .listViewData {
@@ -45,7 +54,7 @@
 }
 
 .pastSpecs {
-    color: red;
+    color: #C30E0E;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -57,10 +66,34 @@
 }
 
 .compareAdd {
-    font-size: 70%
+    font-size: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
 }
 
 .customInput:focus ~ .customLabel::before {
     box-shadow:none !important;
     outline: 0;
+}
+
+.addButton {
+    margin-top: -9px;
+}
+
+.Button {
+    /* position: relative;
+    right: -1%; */
+    background-color: #6384A3;
+    color: white;
+    outline: 0;
+    box-shadow: none !important;
+    height: 35px;
+    border-radius: 7px;
+    /* z-index: 10; */
+    padding-right: 5px;
+    padding-left: 10px;
+    /* align-self: flex-start; */
 }
