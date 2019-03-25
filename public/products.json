@@ -6,7 +6,7 @@
         "techical_data": {
             "airflow": "8,500",
             "power": "33",
-            "noise": "40 dBA",
+            "noise": "40",
             "size": "60” "
         },
         "past": "10 firm / 1492 global"
@@ -19,7 +19,7 @@
         "techical_data": {
             "airflow": "6,604",
             "power": "25.92",
-            "noise": "36 dBA",
+            "noise": "36",
             "size": "60” "
         },
         "past": "10 firm / 1492 global"
@@ -32,7 +32,7 @@
         "techical_data": {
             "airflow": "8,500",
             "power": "33",
-            "noise": "40 dBA",
+            "noise": "40",
             "size": "60” "
         },
         "past": "10 firm / 1492 global"
@@ -45,7 +45,7 @@
         "techical_data": {
             "airflow": "8,500",
             "power": "33",
-            "noise": "40 dBA",
+            "noise": "40",
             "size": "60” "
         },
         "past": "10 firm / 1492 global"

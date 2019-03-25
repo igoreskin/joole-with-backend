@@ -7,6 +7,7 @@ const productsPage = (props) => {
     return(
         <div className={styles.allProducts}>
             <Header />
+            <ProductListView />
             <div>In ProductsPage</div>
         </div>
     )

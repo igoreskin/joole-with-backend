@@ -1,0 +1,66 @@
+.listView {
+    display: flex;
+    flex-direction: column;
+    height: 445px;
+    width: 255px;
+    border: 1.5px solid #d9d9d9;
+    margin: 5px;
+
+}
+
+.verified {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif; 
+    color: #6FA7DA; 
+    align-self: flex-end;
+    margin-right: 6px;
+    margin-top: 7px;
+}
+
+.largeDataDiv {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #1F4F7A;
+    font-size: 85%;
+    margin-bottom: 6px;
+    letter-spacing: 0.8px;
+}
+
+.largeDataLine {
+    margin-bottom: -5px;
+}
+
+.strip {
+    background-color: #F2F2F2;
+    padding-top: 5px;
+    padding-bottom: 8px;
+}
+
+.listViewData {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: black;
+    margin-bottom: -5px;
+}
+
+.pastSpecs {
+    color: red;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.pastSpecsLine {
+    margin-bottom: -5px;
+}
+
+.compareAdd {
+    font-size: 70%
+}
+
+.customInput:focus ~ .customLabel::before {
+    box-shadow:none !important;
+    outline: 0;
+}

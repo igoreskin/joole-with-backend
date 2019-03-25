@@ -33,8 +33,10 @@ const header = (props) => {
                     </button>
                         <input className={styles.searchInput} placeholder="search..." />&nbsp;
     
-                    <i class="fas fa-caret-down" style={{ position: 'relative', marginLeft: '-63px', zIndex: "10" }}></i>&nbsp;&nbsp;&nbsp;
-                    <i class="fas fa-search" style={{ position: 'relative', marginLeft: '-3px', zIndex: "10" }}></i>
+                    <i class="fas fa-caret-down" 
+                        style={{ position: 'relative', marginLeft: '-63px', zIndex: "10", cursor: "pointer" }}></i>&nbsp;&nbsp;&nbsp;
+                    <i class="fas fa-search" 
+                        style={{ position: 'relative', marginLeft: '-3px', zIndex: "10", cursor: "pointer" }}></i>
 
                         {/* {this.state.clicked ?
                             <div>
