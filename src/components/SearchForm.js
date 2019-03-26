@@ -19,6 +19,18 @@ class SearchForm extends Component {
         }
     }
 
+    handleOnChange = event => {
+        const fanString = "HVAC fans".toLowerCase();
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+        if(event.target.value === fanString.slice(0, event.target.value.length) && event.target.value.length > 0) {
+            this.setState({clicked: true}, () => {console.log(this.state.valid)})
+        } else {
+            this.setState({clicked: false}, () => {console.log(this.state.valid)})
+        }
+    }
+
     handleSearchClick = () => {
         console.log("Search clicked")
         const clicked = this.state.clicked;
@@ -45,7 +57,7 @@ class SearchForm extends Component {
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Mechanical &nbsp;&nbsp;
                     </button>
-                    <input className={styles.searchInput} placeholder="search..."/>&nbsp;
+                    <input className={styles.searchInput} onChange={this.handleOnChange} name='search' placeholder="search..."/>&nbsp;
 
                     <i class="fas fa-caret-down" 
                         style={{position: 'relative', marginLeft: '-63px', zIndex: "10", cursor: "pointer"}} 
