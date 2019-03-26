@@ -20,12 +20,14 @@ class ProductsPage extends Component {
 
                 <Header />
 
-                <div className={styles.topLine}>
-                    <span className={styles.mechanical}>Mechanical&nbsp;&nbsp;></span><span>&nbsp;&nbsp;HVAC Fans</span>
-                </div>
+                <div className={styles.wrapper}>
+                    <div className={styles.topLine}>
+                        <span className={styles.mechanical}>Mechanical&nbsp;&nbsp;></span><span>&nbsp;&nbsp;HVAC Fans</span>
+                    </div>
 
-                <div className={styles.productList}>
-                    {renderProducts}
+                    <div className={styles.productList}>
+                        {renderProducts}
+                    </div>
                 </div>
 
             </div>

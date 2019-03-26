@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+.wrapper {
+    margin-left: 12%;
+}
+
 .productList {
     display: flex;
 }
@@ -10,8 +14,6 @@
 .topLine {
     font-size: 65%;
     display: flex;
-    /* padding-left: 5px;
-    padding-top: 10px; */
     padding: 10px 0px 6px 18px;
 }
 
