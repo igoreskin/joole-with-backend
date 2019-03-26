@@ -6,9 +6,9 @@ export function loadProducts() {
         return axios.get('products.json')
         .then(response => {const products = response.data;
             if(!localStorage.getItem('products')) {
-                localStorage.setItem('products', JSON.stringify(users))
+                localStorage.setItem('products', JSON.stringify(products))
             }
-            return (dispatch({type: 'LOAD_PRODUCTS', payload: users}, 
+            return (dispatch({type: 'LOAD_PRODUCTS', payload: products}, 
             // console.log(users)
             ))
         })

@@ -4,31 +4,32 @@ import cx from 'classnames';
 import styles from './ProductListView.module.css';
 
 const ProductListView = (props) => {
+    console.log(props.product)
     return(
         <div className={styles.listView}>
 
             <p className={styles.verified}>Verified 08/21/2016</p>
 
             <div>
-                <img src='images/emerson.png' className={styles.fan} />
+                <img src={props.product.image} className={styles.fan} />
             </div>
 
             <div className={styles.largeDataDiv}>
-                <div className={styles.largeDataLine}>Emerson</div>
-                <div className={styles.largeDataLine}>Luray Eco Series</div>
-                <div className={styles.largeDataLine}>CF860</div>
+                <div className={styles.largeDataLine}>{props.product.name}</div>
+                <div className={styles.largeDataLine}>{props.product.series}</div>
+                <div className={styles.largeDataLine}>{props.product.code}</div>
             </div>
 
             <div className={styles.strip}>
-                <div className={styles.listViewData}>CFM</div>
-                <div className={styles.listViewData}>W at max speed</div>
-                <div className={styles.listViewData}>dBA at max speed</div>
-                <div className={styles.listViewData}>fan sweep diameter</div>
+                <div className={styles.listViewData}>{props.product.technical_data.airflow} CFM</div>
+                <div className={styles.listViewData}>{props.product.technical_data.power} W at max speed</div>
+                <div className={styles.listViewData}>{props.product.technical_data.noise} dBA at max speed</div>
+                <div className={styles.listViewData}>{props.product.technical_data.size} fan sweep diameter</div>
             </div>
 
             <div className={styles.pastSpecs}>
                 <div className={styles.pastSpecsLine}>Past specifications:</div>
-                <div className={styles.pastSpecsLine}>10 firm / 1492 global</div>
+                <div className={styles.pastSpecsLine}>{props.product.past}</div>
             </div>
 
 
