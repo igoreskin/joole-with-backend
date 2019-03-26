@@ -9,13 +9,12 @@ import { bindActionCreators } from 'redux';
 class ProductsPage extends Component {
 
     componentDidMount() {
-        this.props.actions.loadProducts(); 
-        // console.log(this.props.products)
+        this.props.actions.loadProducts();
     }
 
     render() {
         console.log(this.props.products)
-        const renderProducts = this.props.products.map((product) => <ProductListView product={product}/>)
+        const renderProducts = this.props.products.map((product) => <ProductListView product={product} key={product.code} />)
         return (
             <div className={styles.allProducts}>
 
@@ -30,7 +29,6 @@ class ProductsPage extends Component {
 }
 
 const mapStateToProps = (state) => {
-    // console.log(state.products.products)
     return {
         products: state.products.products
         }
