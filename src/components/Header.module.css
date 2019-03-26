@@ -1,6 +1,7 @@
 .headerContainer {
     background: linear-gradient(to right, #ffffff, 30%, #b3d1ec, #cbdff2);
     height: 120px;
+    border-bottom: 1.5px solid #BFBFBF;
 }
 
 .headerRow {

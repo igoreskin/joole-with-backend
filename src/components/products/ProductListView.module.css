@@ -74,6 +74,10 @@
     padding-top: 30px;
 }
 
+.customInput, .customLabel {
+    cursor: pointer;
+}
+
 .customInput:focus ~ .customLabel::before {
     box-shadow:none !important;
     outline: 0;
