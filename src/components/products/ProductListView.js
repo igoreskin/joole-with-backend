@@ -35,8 +35,8 @@ const ProductListView = (props) => {
 
             <div className={styles.compareAdd}>
                 <div className={cx(globalStyles["custom-control"], globalStyles["custom-checkbox"])}>
-                    <input type="checkbox" className={cx(globalStyles["custom-control-input"], styles.customInput)} id="customCheck" />
-                    <label className={cx(globalStyles["custom-control-label"], styles.customLabel)} for="customCheck">Compare</label>
+                    <input type="checkbox" className={cx(globalStyles["custom-control-input"], styles.customInput)} id={props.product.code} />
+                    <label className={cx(globalStyles["custom-control-label"], styles.customLabel)} for={props.product.code}>Compare</label>
                 </div>
 
                 <div className={styles.addButton}>
